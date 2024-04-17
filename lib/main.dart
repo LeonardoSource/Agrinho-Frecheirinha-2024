@@ -83,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
           SalomonBottomBarItem(
             icon: Icon(Icons.games), 
             title: Text("Games"),
-            selectedColor: Color,
+            selectedColor: Colors.white,
             ),
         ],
 
