@@ -28,7 +28,7 @@ class GridGame extends StatelessWidget {
         decoration: const BoxDecoration(
           image: DecorationImage(
             opacity: 1.0,
-            image: AssetImage('assets/fundo.png'), // Caminho da imagem
+            image: AssetImage('assets/fundomeioambiente.png'), // Caminho da imagem
             fit: BoxFit.fitWidth,
           ),
         ),

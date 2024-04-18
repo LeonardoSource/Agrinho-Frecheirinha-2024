@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
-import 'saudePage.dart';
+import 'MeioAmbientePage.dart';
 import 'acoesPage.dart';
 import 'telaInicial.dart';
 import 'play.dart';
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: const HomeScreen(),
-      title: "Programa Agrinho Escola FFP",
+      title: "Programa Agrinho",
       theme: ThemeData(
         primarySwatch: Colors.green,
           )
@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
     // 01 tela home
     const TelaInicial(),
     // 02 tela sobre saude
-    const Saude(),
+    const MeioAmbiente(),
     // 03 tela sobre as acoes desenvolvidas
     const Acoes(),
     // 04 tela sobre o quiz jogos
@@ -55,18 +55,20 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       
       body: _pages[_currentIndex], // Conteúdo da tela selecionada
-      bottomNavigationBar: SalomonBottomBar(
+      bottomNavigationBar: 
+      
+      SalomonBottomBar(
 
         currentIndex: _currentIndex, // Índice do item selecionado
 
-        backgroundColor: Colors.greenAccent,
-        selectedColorOpacity: 0.4,
-        margin: const EdgeInsets.all(13),
+        backgroundColor: Colors.green,
+        selectedColorOpacity: 0.3,
+        margin: const EdgeInsets.all(12),
 
         items: [
            
           SalomonBottomBarItem(
-            icon: Icon(Icons.home), 
+            icon: Image.asset("assets/icons/meioambiente.png"), 
             title: Text("Inicio"),
             selectedColor: Colors.white
             ),

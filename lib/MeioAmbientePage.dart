@@ -2,14 +2,14 @@
 import 'package:flutter/material.dart';
 import 'dicas.dart';
 
-class Saude extends StatefulWidget {
-  const Saude({super.key});
+class MeioAmbiente extends StatefulWidget {
+  const MeioAmbiente({super.key});
 
   @override
-  _Saude createState() => _Saude();
+  _MeioAmbiente createState() => _MeioAmbiente();
 }
 
-class _Saude extends State<Saude> {
+class _MeioAmbiente extends State<MeioAmbiente> {
   bool _expanded = false;
   // mapeamento ds pastas e tamanho da lisa de imagens
   Map<String, List<dynamic>> dicasList = {
@@ -30,7 +30,7 @@ class _Saude extends State<Saude> {
         decoration: const BoxDecoration(
         image: DecorationImage(
           opacity: 1.0,
-          image: AssetImage('assets/fundo.png'), // Caminho da imagem
+          image: AssetImage('assets/fundomeioambiente.png'), // Caminho da imagem
           fit: BoxFit.fitWidth,
         )
             ),

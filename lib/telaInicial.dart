@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'aboutffp.dart';
 import 'aboutfrecheirinha.dart';
 import 'aboutagrinho.dart';
 
@@ -12,7 +11,7 @@ class TelaInicial extends StatelessWidget {
       decoration: const BoxDecoration(
         image: DecorationImage(
           opacity: 1.0,
-          image: AssetImage('assets/fundo.png'), // Caminho da imagem
+          image: AssetImage('assets/fundoprincipal.png'), // Caminho da imagem
           fit: BoxFit.fitWidth,
         ),
       ),
@@ -23,12 +22,9 @@ class TelaInicial extends StatelessWidget {
 
           return Center(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                SizedBox(
-                  height: maxHeight * 0.3,
-                  child: Image.asset('assets/agrinho2023.png'),
-                ),
+              
                 Card(
                   color: Colors.green,
                   elevation: 10, // Controle a intensidade da sombra
@@ -49,32 +45,13 @@ class TelaInicial extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 10),
-                        Text(
-                          'ESSE APP FAZ PARTE DAS AÇÕES DO PROGRAMA AGRINHO DA ESCOLA FRANCISCO FERREIRA PONTES',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 0.03 * maxHeight,
-                            color: Colors.white,
-                          ),
-                        ),
+                      
                         const SizedBox(height: 10),
-                        Text(
-                          'FRECHEIRINHA - CE',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 0.03 * maxHeight,
-                            color: Colors.white,
-                          ),
-                        ),
+  
                       ],
                     ),
                   ),
                 ),
-                /*SizedBox(
-                  height: maxHeight * 0.5,
-                  child: CarouselInicial(),
-                ),*/
                 
                 // BOTAO SOBRE O AGRINHO
                 OutlinedButton(
@@ -101,39 +78,13 @@ class TelaInicial extends StatelessWidget {
                     ),
                   ),
                 const SizedBox(height: 10),
-                // BOTAO CONHECA A ESCOLA FRANCISCO FERREIRA
-                OutlinedButton(
-                    style: OutlinedButton.styleFrom(
-
-                      fixedSize: Size(tamanhoTela*0.8, 60),
-                      side: const BorderSide(color: Color.fromARGB(255, 0, 0, 0), width: 2),
-                      backgroundColor: Colors.amberAccent,
-                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                      
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-
-                    ),
-                ),
-                    
-                    // Animacao quando o botao da pontuuacao é pressionado
-                    onPressed: () => Navigator.push(
-                      context, 
-                      MaterialPageRoute(builder: ((context) => InfoEscola()))),
-                    
-                    child: const Text(
-                    'Conheça a Escola Francisco Ferreira Pontes',
-                      style: TextStyle(color: Colors.black),
-                    ),
-                  ),
-                const SizedBox(height: 10),
                 // BOTÃO CONHEÇA FRECHERINHA
                 OutlinedButton(
                     style: OutlinedButton.styleFrom(
 
                       fixedSize: Size(tamanhoTela*0.8, 60),
                       side: const BorderSide(color: Color.fromARGB(255, 0, 0, 0), width: 2),
-                      backgroundColor: Colors.redAccent,
+                      backgroundColor: Colors.yellowAccent,
                       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                       
                       shape: RoundedRectangleBorder(
@@ -151,6 +102,8 @@ class TelaInicial extends StatelessWidget {
                       style: TextStyle(color: Colors.black),
                     ),
                   ),
+
+                  const SizedBox(height: 150),
               ],
             ),
           );
