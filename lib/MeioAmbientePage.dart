@@ -13,10 +13,6 @@ class _MeioAmbiente extends State<MeioAmbiente> {
   bool _expanded = false;
   // mapeamento ds pastas e tamanho da lisa de imagens
   Map<String, List<dynamic>> dicasList = {
-      'Dicas sobre alimentação': ['assets/alimentacao/', 2],
-      //'Agua é saudável': 'agua/',
-      'Saúde Bucal': ['assets/boca/', 2],
-      'Sobre Obesidade': ['assets/obesidade/', 5],
       'Vida saudável': ['assets/saudavel/', 5]
   };
 
@@ -24,7 +20,7 @@ class _MeioAmbiente extends State<MeioAmbiente> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('DICAS PARA UMA VIDA SAUDÁVEL'),
+        title: Text('MEIO AMBIENTE'),
       ),
       body: Container(
         decoration: const BoxDecoration(

@@ -7,11 +7,6 @@ class QuizGame extends StatelessWidget {
   // Mapeamento dos caminhos das imagens nome e questoes
   final List<Map<String, dynamic>> cardItems = [
     {
-      'imagem': 'assets/dentes.png',
-      'nome': 'Quiz Saúde Bucal', 
-      'questao': saudeBucal
-    },
-    {
       'imagem': 'assets/lixo.png',
       'nome': 'Quiz Reciclagem', 
       'questao': reciclagem

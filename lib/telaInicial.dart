@@ -31,7 +31,7 @@ class TelaInicial extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                  margin: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
                   child: Padding(
                     padding: const EdgeInsets.all(5.0),
                     child: Column(
@@ -44,9 +44,6 @@ class TelaInicial extends StatelessWidget {
                             color: Colors.white,
                           ),
                         ),
-                        const SizedBox(height: 10),
-                      
-                        const SizedBox(height: 10),
   
                       ],
                     ),

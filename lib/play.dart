@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'MemoryGame.dart';
 import 'QuizGame.dart';
+import 'IdentifyGame.dart';
 
 // Mapeamento dos caminhos das imagens nome as janelas dos jogos
   final List<Map<String, dynamic>> cardItems = [
@@ -12,6 +13,10 @@ import 'QuizGame.dart';
       'imagem': 'assets/icons/quiz.png',
       'func' : () => QuizGame(),
     },
+    {
+      'imagem': 'assets/icons/quiz.png',
+      'func' : () => Identify(),
+    },
   ];
 
 class GridGame extends StatelessWidget {
@@ -19,7 +24,7 @@ class GridGame extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Agrinho Play"),
+        title: Text("Hora de Jogar!!"),
         centerTitle: true,
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
@@ -28,19 +33,19 @@ class GridGame extends StatelessWidget {
         decoration: const BoxDecoration(
           image: DecorationImage(
             opacity: 1.0,
-            image: AssetImage('assets/fundomeioambiente.png'), // Caminho da imagem
+            image: AssetImage('assets/fundoplay.png'), // Caminho da imagem
             fit: BoxFit.fitWidth,
           ),
         ),
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, // Two columns
-            crossAxisSpacing: 10.0,
-            mainAxisSpacing: 10.0,
+            crossAxisSpacing: 5.0,
+            mainAxisSpacing: 7.0,
           ),
-          itemCount: 2, // Only show two items
+          itemCount: 3, // Only show two items
           itemBuilder: (context, index) {
-            final cardNames = ["Jogo da Memória", "Quiz"];
+          final cardNames = ["Jogo da Memória", "Quiz", "Identifique"];
             return GestureDetector(
               
                onTap: () {
@@ -52,7 +57,6 @@ class GridGame extends StatelessWidget {
                         builder: (context) => cardItems[index]['func']() )
                     
                     );
-                    print('Card foi tocado.');
                     
                     },
 

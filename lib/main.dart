@@ -62,10 +62,10 @@ class _HomeScreenState extends State<HomeScreen> {
         activeColor: Colors.transparent,
 
         items: const [
-          TabItem(icon: Icons.home, /*title: 'Início'*/),
+          TabItem(icon: Image(image: AssetImage("assets/icons/inicio.png"), fit: BoxFit.contain,), title: 'Início'),
           TabItem(icon: Image(image: AssetImage("assets/icons/meioambiente.png"), fit: BoxFit.contain,), title: 'Ambiente'),
-          TabItem(icon: Icons.handshake, title: 'Ações'),
-          TabItem(icon: Icons.games_rounded, title: 'Quiz'),
+          TabItem(icon: Image(image: AssetImage("assets/icons/acao.png"), fit: BoxFit.contain,), title: 'Ações'),
+          TabItem(icon: Image(image: AssetImage("assets/icons/play.png"), fit: BoxFit.contain,), title: 'Quiz'),
         ],
 
         initialActiveIndex: _currentIndex, // Índice do item selecionado

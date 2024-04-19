@@ -36,8 +36,8 @@ class _Dica extends State<Dica> {
           ),
           color: _isExpanded ? Colors.blue : Colors.white, // Defina a cor do Card
           child: ListTile(
-            leading: Image.asset('assets/medica.png', height: 200,), // Ícone
-            subtitle: Text('Saiba Mais'),
+            //leading: Image.asset('assets/medica.png', height: 200,), // Ícone
+            //subtitle: Text('Saiba Mais'),
             title: Text(
               '${widget.nomeDica}\n',
               style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
