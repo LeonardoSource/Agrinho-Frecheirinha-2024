@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
+import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'MeioAmbientePage.dart';
 import 'acoesPage.dart';
 import 'telaInicial.dart';
@@ -55,41 +55,20 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       
       body: _pages[_currentIndex], // Conteúdo da tela selecionada
-      bottomNavigationBar: 
-      
-      SalomonBottomBar(
+      bottomNavigationBar: ConvexAppBar(
 
-        currentIndex: _currentIndex, // Índice do item selecionado
+        backgroundColor: Colors.transparent,
+        color: Colors.black,
+        activeColor: Colors.transparent,
 
-        backgroundColor: Colors.green,
-        selectedColorOpacity: 0.3,
-        margin: const EdgeInsets.all(12),
-
-        items: [
-           
-          SalomonBottomBarItem(
-            icon: Image.asset("assets/icons/meioambiente.png"), 
-            title: Text("Inicio"),
-            selectedColor: Colors.white
-            ),
-          SalomonBottomBarItem(
-            icon: Icon(Icons.health_and_safety), 
-            title: Text("Saúde"),
-            selectedColor: Colors.white,
-            ),  
-          SalomonBottomBarItem(
-            icon: Icon(Icons.handshake), 
-            title: Text("Ações"),
-            selectedColor: Colors.white,
-            ),
-          SalomonBottomBarItem(
-            icon: Icon(Icons.games), 
-            title: Text("Games"),
-            selectedColor: Colors.white,
-            ),
+        items: const [
+          TabItem(icon: Icons.home, /*title: 'Início'*/),
+          TabItem(icon: Image(image: AssetImage("assets/icons/meioambiente.png"), fit: BoxFit.contain,), title: 'Ambiente'),
+          TabItem(icon: Icons.handshake, title: 'Ações'),
+          TabItem(icon: Icons.games_rounded, title: 'Quiz'),
         ],
 
-
+        initialActiveIndex: _currentIndex, // Índice do item selecionado
         onTap: (index) {
           setState(() {
             _currentIndex = index; // Atualiza o índice ao selecionar um item
