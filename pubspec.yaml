@@ -4,7 +4,7 @@ description: Programa Agrinho Município de Frecheirinha - CE.
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
-version: 1.0.0+1
+version: 1.0.1+2
 
 environment:
   sdk: '>=3.0.6 <4.0.0'
@@ -13,12 +13,9 @@ dependencies:
   flutter:
     sdk: flutter
 
-
-  cupertino_icons: ^1.0.2
   carousel_slider: ^4.2.1
   flutter_inappwebview: ^6.0.0
   flutter_launcher_icons: ^0.13.1
-  flutter_native_splash: ^2.3.2
   convex_bottom_bar: ^3.2.0
   assets_audio_player: ^3.0.8
   photo_view: ^0.14.0
@@ -46,8 +43,6 @@ flutter:
     - assets/icons/
     - assets/songs/
     - assets/frecheirinha/
-    - assets/escola/
-
 
 
 
@@ -55,12 +50,6 @@ flutter:
 flutter_launcher_icons:
   android: true
   image_path: "assets/icons/icon.jpg"
-  min_sdk_android: 24 # android min sdk min:16, default 21
+  min_sdk_android: 27 # android min sdk min:16, default 21
 
-
-
-flutter_native_splash:
-  image: assets/icons/splash.png
-  color: "#FFFFFF"
-  fill: true
 

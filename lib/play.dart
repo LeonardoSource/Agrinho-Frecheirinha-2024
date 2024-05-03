@@ -14,7 +14,7 @@ import 'IdentifyGame.dart';
       'func' : () => QuizGame(),
     },
     {
-      'imagem': 'assets/icons/quiz.png',
+      'imagem': 'assets/icons/identify.png',
       'func' : () => Identify(),
     },
   ];

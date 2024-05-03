@@ -12,7 +12,7 @@ class TelaInicial extends StatelessWidget {
         image: DecorationImage(
           opacity: 1.0,
           image: AssetImage('assets/fundoprincipal.png'), // Caminho da imagem
-          fit: BoxFit.fitWidth,
+          fit: BoxFit.fitHeight,
         ),
       ),
       child: LayoutBuilder(
