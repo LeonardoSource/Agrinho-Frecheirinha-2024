@@ -18,7 +18,7 @@ class _QuizAppState extends State<QuizApp> {
 
   String nivel(double score){
     if (score > 30){
-      return "Parabéns! Tente outros Quizes e se divirta!";
+      return "Parabéns! Se divirta!";
     } else {
       return "Tente novamente e melhore sua pontuação";
     }
@@ -91,7 +91,7 @@ class _QuizAppState extends State<QuizApp> {
 
                 side: BorderSide(color: const Color.fromARGB(255, 5, 3, 3), width: 2),
                 backgroundColor: Colors.redAccent,
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                 
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
@@ -168,10 +168,10 @@ class _QuizAppState extends State<QuizApp> {
                   OutlinedButton(
                     style: OutlinedButton.styleFrom(
 
-                      fixedSize: Size(tamanhoTela*0.4, 40),
+                      fixedSize: Size(tamanhoTela*0.4, 50),
                       side: BorderSide(color: Color.fromARGB(255, 0, 0, 0), width: 2),
-                      backgroundColor: Colors.redAccent,
-                      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                      backgroundColor: const Color.fromARGB(255, 255, 82, 203),
+                      //padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                       
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
@@ -186,26 +186,27 @@ class _QuizAppState extends State<QuizApp> {
                     ),
                   ),
                   
-                  SizedBox(height: 20,),
+                  SizedBox(width: 20,),
                   // Mostra a pontuação
                   OutlinedButton(
                     style: OutlinedButton.styleFrom(
 
-                      fixedSize: Size(tamanhoTela*0.4, 40),
+                      fixedSize: Size(tamanhoTela*0.4, 50),
                       side: BorderSide(color: Color.fromARGB(255, 0, 0, 0), width: 2),
                       backgroundColor: Colors.yellowAccent,
-                      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                      //padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                       
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(15),
 
                     )),
                     
                     // Animacao quando o botao da pontuuacao é pressionado
+                    // SUBSTITUIR POR UM CHAMADA DE JANELA
                     onPressed: () => print('Voce tem 10 pontos'),
                     
                     child: Text(
-                      pontosMarcados.toString(),
+                      pontosMarcados.toString() + " Pontos",
                       style: TextStyle(color: Colors.black),
                     ),
                   ),
@@ -214,6 +215,7 @@ class _QuizAppState extends State<QuizApp> {
 
               SizedBox(height: 30),
               
+              // Questao em si
               Text(
                 widget.categoria[_currentQuestionIndex]['question'],
                 style: TextStyle(
@@ -267,7 +269,7 @@ class _QuizAppState extends State<QuizApp> {
                 ),
               ),
 
-              Image.asset('assets/logoagrinho.png', width: tamanhoTela * 0.3,),
+              Image.asset('assets/logoagrinho.png', width: tamanhoTela * 0.4,),
             ],
           ),
         ),

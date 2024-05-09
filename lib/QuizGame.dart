@@ -71,7 +71,6 @@ class QuizGame extends StatelessWidget {
                         builder: (context) => QuizApp(cardItems[index]['questao']))
                     
                     );
-                    print('Card foi tocado.');
                     
                     },
                   

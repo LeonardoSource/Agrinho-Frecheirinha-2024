@@ -22,7 +22,7 @@ class _AcoesState extends State<Acoes> {
               InAppWebView(
                 initialUrlRequest: URLRequest(
                                   url: WebUri.uri(
-                                    Uri.parse('https://www.google.com/'),
+                                    Uri.parse('https://agrinhofrecheirinha.blogspot.com/'),
                                   ),
                                 ),
                 
