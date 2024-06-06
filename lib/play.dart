@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'MemoryGame.dart';
 import 'QuizGame.dart';
 import 'IdentifyGame.dart';
+import 'sustentabilidade.dart';
 
 // Mapeamento dos caminhos das imagens nome as janelas dos jogos
   final List<Map<String, dynamic>> cardItems = [
@@ -17,6 +18,10 @@ import 'IdentifyGame.dart';
       'imagem': 'assets/icons/identify.png',
       'func' : () => Identify(),
     },
+     {
+      'imagem': 'assets/icons/sustentabilidade.png',
+      'func' : () => Sustentabilidade(),
+    }
   ];
 
 class GridGame extends StatelessWidget {
@@ -43,9 +48,9 @@ class GridGame extends StatelessWidget {
             crossAxisSpacing: 5.0,
             mainAxisSpacing: 7.0,
           ),
-          itemCount: 3, // Only show two items
+          itemCount: 4, // Only show two items
           itemBuilder: (context, index) {
-          final cardNames = ["Jogo da Memória", "Quiz", "Identifique"];
+          final cardNames = ["Jogo da Memória", "Quiz", "Identifique", "Sustentabilidade"];
             return GestureDetector(
               
                onTap: () {
