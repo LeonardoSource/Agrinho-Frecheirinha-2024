@@ -17,7 +17,7 @@ class _DicasCarrouselState extends State<DicasCarrousel> {
   ];
 
   int _currentIndex = 0;
-  CarouselController _carouselController = CarouselController();
+  CarouselSliderController _carouselController = CarouselSliderController();
 
   @override
   Widget build(BuildContext context) {
